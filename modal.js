@@ -298,21 +298,27 @@ form.addEventListener("submit", (event) => {
   isValid = conditionAccepted(conditions) && isValid;
 
   if (isValid) {
-      console.log("Le formulaire est valide !");
-      success.style.display ="block";
-      
-      success.classList.add('success-message-container');
-      mainPage.classList.add('displayer');
+    console.log("Le formulaire est valide !");
     
-      
-      form.reset();
-      closeModal();
-        // formContent.classList.add('displayer');
-    
+    emailjs.sendForm('service_p337i46', 'template_xxx', this) // Remplacez 'template_xxx' par votre template_id
+      .then(function () {
+        alert('Email envoyé avec succès !');
+        
+        // Afficher le message de succès et réinitialiser le formulaire
+        success.style.display = "block";
+        success.classList.add('success-message-container');
+        mainPage.classList.add('displayer');
+        
+        form.reset(); // Réinitialiser le formulaire
+        closeModal(); // Fermer le modal
+        
+      }, function (error) {
+        alert('Échec de l\'envoi... ' + JSON.stringify(error));
+      });
+} else {
+    console.log("Le formulaire contient des erreurs.");
+}
 
-  } else {
-      console.log("Le formulaire contient des erreurs.");
-  }
 
 })
 
