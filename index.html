@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Reservation</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="modal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" />
+  <script src="modal.js" defer></script>
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <div class="header-logo">
+      <img alt="logo" src="Logo.png" width="auto" height="auto" />
+    </div>
+    <div class="main-navbar">
+
+      <a href="#" class="active"><span>Accueil</span></a>
+      <a href="#"><span>Nos services</span></a>
+      <a href="#"><span>À propos</span></a>
+      <a href="#"><span>Contact</span></a>
+      <a href="javascript:void(0);" class="icon" onclick="editNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  </div>
+  <div id="success-message" class="success-message-container">
+    <div class="content">
+      <span class="close-btn"></span>
+      <div class="modal-body-success">
+        <div class="message-success">
+        <p class="message-success-content">Merci pour votre inscription</p>
+      </div>
+        <!-- <button class="btn-success" onclick="closeSuccessMessage()">Fermer</button> -->
+        <button id="closeButton" class="btn-success">Fermer</button>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="bground">
+      <div class="content"id ="formContent">
+        <!--Bouton pour fermer la modale-->
+        <span class="close"></span>
+        <div class="modal-body">
+          <form id="main-form" name="reserve" action="index.html" method="get"> <!--onsubmit="return validate();"-->
+            <div class="formData formDisplay">
+              <label for="first">Prénom</label><br>
+              <input class="text-control" type="text" id="first" name="prénom" /><br> <!--minlength="2"-->
+            </div>
+            <div class="formData formDisplay">
+              <label for="last">Nom</label><br>
+              <input class="text-control" type="text" id="last" name="nom" /><br>
+            </div>
+            <div class="formData formDisplay">
+              <label for="email">E-mail</label><br>
+              <input class="text-control" type="text" id="email" name="email" /><br>
+              <!--remettre type=email après les tests-->
+            </div>
+            
+            <p class="text-label">Pour quel service souhaitez-vous des informations ?</p>
+            <div class="formData" id="tournamentLocation">
+              <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" checked />
+              <label class="checkbox-label" for="location1">
+                <span class="checkbox-icon"></span>
+                Site web</label>
+              <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco" />
+              <label class="checkbox-label" for="location2">
+                <span class="checkbox-icon"></span>
+                Application</label>
+              <input class="checkbox-input" type="radio" id="location3" name="location" value="Seattle" />
+              <label class="checkbox-label" for="location3">
+                <span class="checkbox-icon"></span>
+                Réseaux</label>
+              <input class="checkbox-input" type="radio" id="location4" name="location" value="Chicago" />
+              <label class="checkbox-label" for="location4">
+                <span class="checkbox-icon"></span>
+                Formation</label>
+              <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston" />
+              <label class="checkbox-label" for="location5">
+                <span class="checkbox-icon"></span>
+                Audit complet</label>
+              <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland" />
+              <label class="checkbox-label" for="location6">
+                <span class="checkbox-icon"></span>
+                Je souhaite être conseillé</label>
+            </div>
+
+            <div class="formData formDisplay2">
+              <input class="checkbox-input" type="checkbox" id="checkbox1" />
+              <label class="checkbox2-label" for="checkbox1" required>
+                <span class="checkbox-icon"></span>
+                J'ai lu et accepté les conditions d'utilisation.
+              </label>
+              <br>
+             
+            </div>
+            <input class="btn-submit" type="submit" class="button" value="C'est parti" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <main id="main-page" >
+   
+      <div id="page-content">
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-headline">
+            Cybersecurity<br>
+            agency
+          </h1>
+          <p class="hero-text">
+            Protégez votre entreprise des menaces numériques avec nos experts en cybersécurité : anticiper, sécuriser, et innover pour un avenir numérique serein.
+          </p>
+          <button class="btn-signup modal-btn">
+            Nous contacter
+          </button>
+        </div>
+        <div class="hero-img">
+          <img src="./bg_img.jpg" alt="img" />
+        </div>
+        <button class="btn-signup modal-btn">
+          Nous contacter
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p class="copyrights">
+      Copyright 2024, Cybersecurity Agency.
+    </p>
+  </footer>
+
+</body>
+
+</html>
